@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkFuture AI | Future of Work</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- ================= LANDING PAGE ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">W</div>
+        <span>WorkFuture <b>AI</b></span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <button class="btn-outline" onclick="openAuth('login')">Login</button>
+        <button class="btn-primary" onclick="showApp()">Get Started →</button>
+    </div>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="badge">🚀 AI-Powered Future of Work</span>
+
+        <h1>
+            Prepare People.<br>
+            <span>Transform Work.</span><br>
+            Power the Future.
+        </h1>
+
+        <p>
+            An intelligent platform that helps people and organizations
+            understand automation, discover future skills and build
+            Human + AI workplaces.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn-primary large" onclick="showApp()">
+                Get Started →
+            </button>
+
+            <button class="btn-outline large" onclick="scrollFeatures()">
+                ▶ Watch Demo
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="ai-circle">
+            <div class="ai-icon">AI</div>
+        </div>
+
+        <div class="floating-card card-one">
+            🧠 <b>Analyze</b>
+        </div>
+
+        <div class="floating-card card-two">
+            ⚙️ <b>Automate</b>
+        </div>
+
+        <div class="floating-card card-three">
+            📚 <b>Reskill</b>
+        </div>
+
+        <div class="floating-card card-four">
+            📈 <b>Grow</b>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURE STRIP -->
+
+<section class="feature-strip" id="features">
+
+    <div class="feature-item">
+        <span>🤖</span>
+        <b>Task Automation</b>
+        <small>Analyze workplace tasks</small>
+    </div>
+
+    <div class="feature-item">
+        <span>🧠</span>
+        <b>Skill Analysis</b>
+        <small>Discover skill gaps</small>
+    </div>
+
+    <div class="feature-item">
+        <span>🔄</span>
+        <b>Reskill & Upskill</b>
+        <small>Become future-ready</small>
+    </div>
+
+    <div class="feature-item">
+        <span>🤝</span>
+        <b>Human + AI</b>
+        <small>Build better teams</small>
+    </div>
+
+    <div class="feature-item">
+        <span>📊</span>
+        <b>Workforce Analytics</b>
+        <small>Measure impact</small>
+    </div>
+
+</section>
+
+
+<!-- ================= APPLICATION ================= -->
+
+<div id="app" class="app-container hidden">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">W</div>
+            <span>WorkFuture <b>AI</b></span>
+        </div>
+
+        <div class="menu">
+
+            <button class="menu-item active" onclick="showPage('dashboard',this)">
+                📊 <span>Dashboard</span>
+            </button>
+
+            <button class="menu-item" onclick="showPage('task',this)">
+                🤖 <span>Task Analyzer</span>
+            </button>
+
+            <button class="menu-item" onclick="showPage('skill',this)">
+                🧠 <span>Skill Analyzer</span>
+            </button>
+
+            <button class="menu-item" onclick="showPage('reskill',this)">
+                🔄 <span>Reskill & Upskill</span>
+            </button>
+
+            <button class="menu-item" onclick="showPage('team',this)">
+                🤝 <span>Team Planner</span>
+            </button>
+
+            <button class="menu-item" onclick="showPage('reports',this)">
+                📈 <span>Reports</span>
+            </button>
+
+            <button class="menu-item" onclick="showPage('career',this)">
+                👩‍💻 <span>AI Career Assistant</span>
+            </button>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <button>⚙️ Settings</button>
+            <button onclick="location.reload()">🚪 Logout</button>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <div>
+                <span class="mobile-menu">☰</span>
+                <h2 id="pageTitle">Dashboard</h2>
+                <p>Your journey to a future-ready career starts here.</p>
+            </div>
+
+            <div class="profile">
+                <div class="avatar">N</div>
+                <div>
+                    <b>Neha Kumari</b>
+                    <small>User</small>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="page active-page" id="dashboard">
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon green">⚙️</div>
+                    <div>
+                        <small>Automation Potential</small>
+                        <h2>68%</h2>
+                        <span class="positive">↑ 12%</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">🤖</div>
+                    <div>
+                        <small>AI Opportunity</small>
+                        <h2>82%</h2>
+                        <span class="positive">↑ 10%</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon red">📚</div>
+                    <div>
+                        <small>Skill Gap</small>
+                        <h2>45%</h2>
+                        <span class="warning">Needs action</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">⏱️</div>
+                    <div>
+                        <small>Potential Time Saving</small>
+                        <h2>24h</h2>
+                        <span class="positive">per week</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Automation vs Human Workload</h3>
+                            <p>AI-powered task classification</p>
+                        </div>
+                    </div>
+
+                    <canvas id="automationChart"></canvas>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <h3>Future Ready Skills</h3>
+                    </div>
+
+                    <div class="skill-progress">
+
+                        <div>
+                            <span>Generative AI</span>
+                            <b>78%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:78%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-progress">
+
+                        <div>
+                            <span>Cloud Computing</span>
+                            <b>62%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:62%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-progress">
+
+                        <div>
+                            <span>Data Analytics</span>
+                            <b>55%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:55%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-progress">
+
+                        <div>
+                            <span>System Design</span>
+                            <b>48%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:48%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="ai-insight">
+                💡
+                <div>
+                    <b>AI Insight</b>
+                    <p>
+                        Your current skill set has strong development potential.
+                        Focus on Generative AI, Cloud and Data Analytics to
+                        increase future opportunities.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= TASK ANALYZER ================= -->
+
+        <section class="page" id="task">
+
+            <div class="page-intro">
+                <span class="big-icon">🤖</span>
+                <div>
+                    <h2>Task Automation Analyzer</h2>
+                    <p>Enter workplace tasks and let AI identify automation opportunities.</p>
+                </div>
+            </div>
+
+            <div class="analyzer-box">
+
+                <label>Enter your workplace tasks</label>
+
+                <textarea id="taskInput"
+                    placeholder="Example:
+Data entry
+Customer support
+Report generation
+Email management
+Data analysis"></textarea>
+
+                <button class="btn-primary" onclick="analyzeTasks()">
+                    ✨ Analyze Tasks
+                </button>
+
+            </div>
+
+
+            <div id="taskResult" class="result-box hidden">
+
+                <h3>AI Analysis Result</h3>
+
+                <div class="analysis-grid">
+
+                    <div class="analysis-card human">
+                        <span>👤</span>
+                        <h3>Human Only</h3>
+                        <h2 id="humanCount">0</h2>
+                        <p>Decision making<br>Creative work</p>
+                    </div>
+
+                    <div class="analysis-card auto">
+                        <span>🤖</span>
+                        <h3>AI / Automated</h3>
+                        <h2 id="autoCount">0</h2>
+                        <p>Data entry<br>Email processing</p>
+                    </div>
+
+                    <div class="analysis-card hybrid">
+                        <span>🤝</span>
+                        <h3>Human + AI</h3>
+                        <h2 id="hybridCount">0</h2>
+                        <p>Reports<br>Data analysis</p>
+                    </div>
+
+                </div>
+
+                <div class="impact-box">
+                    🚀 Estimated time saved:
+                    <strong id="timeSaved">8 hrs/week</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILL ANALYZER ================= -->
+
+        <section class="page" id="skill">
+
+            <div class="page-intro">
+                <span class="big-icon">🧠</span>
+                <div>
+                    <h2>Skill Analyzer</h2>
+                    <p>Discover your current strengths and future skill gaps.</p>
+                </div>
+            </div>
+
+            <div class="analyzer-box">
+
+                <label>Enter your skills</label>
+
+                <input
+                    id="skillInput"
+                    type="text"
+                    placeholder="Java, HTML, CSS, MySQL, JavaScript">
+
+                <button class="btn-primary" onclick="analyzeSkills()">
+                    ✨ Analyze Skills
+                </button>
+
+            </div>
+
+
+            <div id="skillResult" class="skill-result hidden">
+
+                <div class="skill-column current">
+
+                    <h3>✅ Current Skills</h3>
+
+                    <div id="currentSkills"></div>
+
+                </div>
+
+                <div class="skill-column gaps">
+
+                    <h3>⚠️ Skill Gaps</h3>
+
+                    <div>
+                        <span>AI Integration</span>
+                        <span>Cloud Computing</span>
+                        <span>Data Analytics</span>
+                    </div>
+
+                </div>
+
+                <div class="skill-column future">
+
+                    <h3>🚀 Future Ready</h3>
+
+                    <div>
+                        <span>Generative AI</span>
+                        <span>AI Agents</span>
+                        <span>System Design</span>
+                        <span>Cloud</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESKILL ================= -->
+
+        <section class="page" id="reskill">
+
+            <div class="page-intro">
+                <span class="big-icon">🔄</span>
+                <div>
+                    <h2>Reskill & Upskill Engine</h2>
+                    <p>Build a personalized pathway toward future-ready roles.</p>
+                </div>
+            </div>
+
+
+            <div class="role-box">
+
+                <label>Select your current role</label>
+
+                <select id="roleSelect">
+
+                    <option>Data Entry Executive</option>
+                    <option>Customer Support Executive</option>
+                    <option>Software Developer</option>
+                    <option>Marketing Executive</option>
+                    <option>Business Analyst</option>
+
+                </select>
+
+                <button class="btn-primary" onclick="generateRoadmap()">
+                    Generate Roadmap
+                </button>
+
+            </div>
+
+
+            <div id="roadmap" class="roadmap hidden">
+
+                <div class="automation-alert">
+                    🚨 Automation Impact: <b>HIGH</b>
+                    <p>Many repetitive tasks in this role can be automated.</p>
+                </div>
+
+                <div class="roadmap-grid">
+
+                    <div class="roadmap-card">
+
+                        <h3>🎯 Recommended Transition</h3>
+
+                        <div class="career-target">
+                            <span>📊</span>
+                            <div>
+                                <h2>Data Analyst</h2>
+                                <p>Higher growth & future demand</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="roadmap-card">
+
+                        <h3>📚 Learning Path</h3>
+
+                        <ol>
+                            <li>SQL</li>
+                            <li>Advanced Excel</li>
+                            <li>Python</li>
+                            <li>Power BI</li>
+                            <li>AI Analytics</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TEAM PLANNER ================= -->
+
+        <section class="page" id="team">
+
+            <div class="page-intro">
+                <span class="big-icon">🤝</span>
+                <div>
+                    <h2>Human + AI Team Planner</h2>
+                    <p>Build productive teams where humans and AI work together.</p>
+                </div>
+            </div>
+
+
+            <div class="team-input">
+
+                <div>
+                    <label>Total Employees</label>
+                    <input id="employees" type="number" value="5">
+                </div>
+
+                <div>
+                    <label>Total Tasks</label>
+                    <input id="tasks" type="number" value="20">
+                </div>
+
+                <button class="btn-primary" onclick="planTeam()">
+                    Plan Team
+                </button>
+
+            </div>
+
+
+            <div id="teamResult" class="team-result">
+
+                <div class="team-list">
+
+                    <div class="team-member">
+                        <span class="member-icon">👤</span>
+                        <div>
+                            <b>Employee 1</b>
+                            <small>Customer communication</small>
+                        </div>
+                        <strong>4 tasks</strong>
+                    </div>
+
+                    <div class="team-member">
+                        <span class="member-icon">👤</span>
+                        <div>
+                            <b>Employee 2</b>
+                            <small>Decision making</small>
+                        </div>
+                        <strong>4 tasks</strong>
+                    </div>
+
+                    <div class="team-member">
+                        <span class="member-icon">👤</span>
+                        <div>
+                            <b>Employee 3</b>
+                            <small>Data analysis</small>
+                        </div>
+                        <strong>4 tasks</strong>
+                    </div>
+
+                    <div class="team-member ai-member">
+                        <span class="member-icon">🤖</span>
+                        <div>
+                            <b>AI Agent</b>
+                            <small>Report generation</small>
+                        </div>
+                        <strong>4 tasks</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="benefits">
+
+                    <h3>✨ Expected Benefits</h3>
+
+                    <p>✓ 60% less repetitive work</p>
+                    <p>✓ Faster task completion</p>
+                    <p>✓ Higher productivity</p>
+                    <p>✓ Better employee experience</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REPORTS ================= -->
+
+        <section class="page" id="reports">
+
+            <div class="page-intro">
+                <span class="big-icon">📈</span>
+                <div>
+                    <h2>Future Workforce Dashboard</h2>
+                    <p>Track automation, AI opportunities and workforce readiness.</p>
+                </div>
+            </div>
+
+
+            <div class="report-cards">
+
+                <div>
+                    <span>⚙️</span>
+                    <small>Automation Potential</small>
+                    <h2>68%</h2>
+                </div>
+
+                <div>
+                    <span>🤖</span>
+                    <small>AI Opportunity</small>
+                    <h2>82%</h2>
+                </div>
+
+                <div>
+                    <span>📚</span>
+                    <small>Skill Gap</small>
+                    <h2>45%</h2>
+                </div>
+
+                <div>
+                    <span>🚀</span>
+                    <small>Future Ready Score</small>
+                    <h2>72/100</h2>
+                </div>
+
+            </div>
+
+
+            <div class="future-score">
+
+                <h3>Your Future Ready Score</h3>
+
+                <div class="score-circle">
+                    <span>72</span>
+                    <small>/100</small>
+                </div>
+
+                <p>
+                    You're on the right track. Improve AI, Cloud and Data skills
+                    to reach the next level.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CAREER ================= -->
+
+        <section class="page" id="career">
+
+            <div class="page-intro">
+                <span class="big-icon">👩‍💻</span>
+                <div>
+                    <h2>AI Career Assistant</h2>
+                    <p>Get personalized future-career recommendations.</p>
+                </div>
+            </div>
+
+
+            <div class="career-profile">
+
+                <div class="profile-large">
+                    N
+                </div>
+
+                <div>
+                    <h2>Neha Kumari</h2>
+                    <p>B.Sc. Information Technology Student</p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <h3 class="career-heading">Recommended Future Careers</h3>
+
+
+            <div class="career-grid">
+
+                <div class="career-card">
+                    <span>💻</span>
+                    <h3>Software Developer</h3>
+                    <b>High Match</b>
+                    <p>Learn DSA, Spring Boot & System Design.</p>
+                    <button class="btn-primary">View Roadmap</button>
+                </div>
+
+                <div class="career-card">
+                    <span>📊</span>
+                    <h3>Data Analyst</h3>
+                    <b>Medium Match</b>
+                    <p>Learn SQL, Python, Power BI & AI Analytics.</p>
+                    <button class="btn-primary">View Roadmap</button>
+                </div>
+
+                <div class="career-card">
+                    <span>🤖</span>
+                    <h3>AI Engineer</h3>
+                    <b>Medium Match</b>
+                    <p>Learn Generative AI, LLMs & AI Agents.</p>
+                    <button class="btn-primary">View Roadmap</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= AUTH MODAL ================= -->
+
+<div id="authModal" class="modal hidden">
+
+    <div class="auth-box">
+
+        <button class="close" onclick="closeAuth()">×</button>
+
+        <div class="auth-logo">
+            <div class="logo-icon">W</div>
+            <h2>WorkFuture AI</h2>
+        </div>
+
+        <div id="loginForm">
+
+            <h2>Welcome Back! 👋</h2>
+            <p>Login to your future-ready workspace.</p>
+
+            <input type="email" placeholder="Email address">
+            <input type="password" placeholder="Password">
+
+            <button class="btn-primary full" onclick="loginUser()">
+                Login
+            </button>
+
+            <p class="switch">
+                Don't have an account?
+                <a onclick="openAuth('register')">Register</a>
+            </p>
+
+        </div>
+
+
+        <div id="registerForm" class="hidden">
+
+            <h2>Create Account 🚀</h2>
+            <p>Start building your future-ready career.</p>
+
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email address">
+            <input type="password" placeholder="Password">
+
+            <button class="btn-primary full" onclick="registerUser()">
+                Create Account
+            </button>
+
+            <p class="switch">
+                Already have an account?
+                <a onclick="openAuth('login')">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
